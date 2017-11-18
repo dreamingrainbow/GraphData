@@ -19,4 +19,62 @@ var_dump($myGraph->contains('Ben'), 'false');
 var_dump($myGraph->checkIfEdgeExists($mango, $ben), 'true');
 var_dump($myGraph);
 echo ('</pre>');
+
+
+
+
+
+bool(false)
+string(5) "false"
+bool(false)
+string(4) "true"
+object(Graph)#1 (1) {
+  ["_vertices":"Graph":private]=>
+  array(3) {
+    [0]=>
+    object(GraphNode)#2 (2) {
+      ["_value":"GraphNode":private]=>
+      string(7) "Butters"
+      ["_edges":"GraphNode":private]=>
+      array(1) {
+        [0]=>
+        object(GraphNode)#3 (2) {
+          ["_value":"GraphNode":private]=>
+          string(6) "Carmen"
+          ["_edges":"GraphNode":private]=>
+          array(1) {
+            [0]=>
+            *RECURSION*
+          }
+        }
+      }
+    }
+    [1]=>
+    object(GraphNode)#3 (2) {
+      ["_value":"GraphNode":private]=>
+      string(6) "Carmen"
+      ["_edges":"GraphNode":private]=>
+      array(1) {
+        [0]=>
+        object(GraphNode)#2 (2) {
+          ["_value":"GraphNode":private]=>
+          string(7) "Butters"
+          ["_edges":"GraphNode":private]=>
+          array(1) {
+            [0]=>
+            *RECURSION*
+          }
+        }
+      }
+    }
+    [3]=>
+    object(GraphNode)#5 (2) {
+      ["_value":"GraphNode":private]=>
+      string(5) "mango"
+      ["_edges":"GraphNode":private]=>
+      array(0) {
+      }
+    }
+  }
+}
 ```
