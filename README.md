@@ -16,18 +16,26 @@ $mango = $myGraph->addVertex('mango', [$ben]);
 var_dump($myGraph->checkIfEdgeExists($mango, $ben), 'true');
 $myGraph->removeVertex('Ben');
 var_dump($myGraph->contains('Ben'), 'false');
-var_dump($myGraph->checkIfEdgeExists($mango, $ben), 'true');
+var_dump($myGraph->checkIfEdgeExists($mango, $ben), 'false');
 var_dump($myGraph);
 echo ('</pre>');
 
-
-
-
-
+bool(true)
+string(4) "true"
+bool(true)
+string(4) "true"
+bool(false)
+string(5) "false"
+bool(true)
+string(4) "true"
+bool(false)
+string(5) "false"
+bool(true)
+string(4) "true"
 bool(false)
 string(5) "false"
 bool(false)
-string(4) "true"
+string(5) "false"
 object(Graph)#1 (1) {
   ["_vertices":"Graph":private]=>
   array(3) {
